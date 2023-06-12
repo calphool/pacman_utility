@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<script language="javascript">
+
+// data scripts
+
+var chipData = [
+    {
+        chipId: 'N1',
+        chipName: 'CD4066',
+        pinCount: 14,
+        datasheetURL: 'datasheets/cd4066b.pdf',
+        oscURLStem: 'osc/N1-*.png'
+    },
+    {
+        chipId: 'M1',
+        chipName: 'IM5623',
+        pinCount: 16,
+        datasheetURL: 'datasheets/IM5623.pdf',
+        oscURLStem: 'osc/M1-*.png'
+    },
+    {
+        chipId: 'L1',
+        chipName: '74LS174',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls174.pdf',
+        oscURLStem: 'osc/L1-*.png'      
+    },
+    {
+        chipId: 'K1',
+        chipName: '74LS283',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls283.pdf',
+        oscURLStem: 'osc/K1-*.png'      
+    },
+    {
+        chipId: 'H1',
+        chipName: '74LS174',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74LS174.pdf',
+        oscURLStem: 'osc/H1-*.png'
+    },
+    {
+        chipId: 'F1',
+        chipName: '74LS283',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74LS283.pdf',
+        oscURLStem: 'osc/F1-*.png'     
+    },
+    {
+        chipId: 'E1',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/E1-*.png'
+    },
+    {
+        chipId: 'S2',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/S2-*.png'    
+    },
+    {
+        chipId: 'R2',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/R2-*.png'        
+    },
+    {
+        chipId: 'P2',
+        chipName: '74LS02',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls02.pdf',
+        oscURLStem: 'osc/P2-*.png'    
+    },
+    {
+        chipId: 'M2',
+        chipName: '74LS273',
+        pinCount: 20,
+        datasheetURL: 'datasheets/74ls273.pdf',
+        oscURLStem: 'osc/M2-*.png'    
+    },
+    {
+        chipId: 'L2',
+        chipName: '74S89',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74s89.pdf',
+        oscURLStem: 'osc/L2-*.png'
+    },
+    {
+        chipId: 'K2',
+        chipName: '74S89',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74s89.pdf',
+        oscURLStem: 'osc/K2-*.png'
+    },
+    {
+        chipId: 'H2',
+        chipName: '74LS86',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls86.pdf',
+        oscURLStem: 'osc/H2-*.png'
+    },
+    {
+        chipId: 'F2',
+        chipName: '74LS283',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls283.pdf',
+        oscURLStem: 'osc/F2-*.png'
+    },
+    {
+        chipId: 'D2',
+        chipName: '93415',
+        pinCount: 16,
+        datasheetURL: 'datasheets/93415.pdf',
+        oscURLStem: 'osc/D2-*.png'
+    },
+    {
+        chipId: 'C2',
+        chipName: '93415',
+        pinCount: 16,
+        datasheetURL: 'datasheets/93415.pdf',
+        oscURLStem: 'osc/C2-*.png'
+    },
+    {
+        chipId: 'B2',
+        chipName: '93415',
+        pinCount: 16,
+        datasheetURL: 'datasheets/93415.pdf',
+        oscURLStem: 'osc/B2-*.png'
+    },
+    {
+        chipId: 'A2',
+        chipName: '93415',
+        pinCount: 16,
+        datasheetURL: 'datasheets/93415.pdf',
+        oscURLStem: 'osc/A2-*.png'
+    },
+    {
+        chipId: 'S3',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/S3-*.png'
+    },
+    {
+        chipId: 'R3',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/R3-*.png'
+    },
+    {
+        chipId: 'P3',
+        chipName: '74LS10',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls10.pdf',
+        oscURLStem: 'osc/P3-*.png'
+    },
+    {
+        chipId: 'N3',
+        chipName: '74LS74',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls74.pdf',
+        oscURLStem: 'osc/N3-*.png'
+    },
+    {
+        chipId: 'M3',
+        chipName: 'IM5623',
+        pinCount: 16,
+        datasheetURL: 'datasheets/IM5623.pdf',
+        oscURLStem: 'osc/M3-*.png'
+    },
+    {
+        chipId: 'L3',
+        chipName: '74LS157',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls157.pdf',
+        oscURLStem: 'osc/L3-*.png'
+    },
+    {
+        chipId: 'K3',
+        chipName: '74LS158',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls158.pdf',
+        oscURLStem: 'osc/K3-*.png'
+    },
+    {
+        chipId: 'H3',
+        chipName: '74S89',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74s89.pdf',
+        oscURLStem: 'osc/H3-*.png'
+    },
+    {
+        chipId: 'F3',
+        chipName: '74S89',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74s89.pdf',
+        oscURLStem: 'osc/F3-*.png'
+    },
+    {
+        chipId: 'E3',
+        chipName: '74LS20',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls20.pdf',
+        oscURLStem: 'osc/E3-*.png'
+    },
+    {
+        chipId: 'D3',
+        chipName: '74LS75',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls75.pdf',
+        oscURLStem: 'osc/D3-*.png'
+    },
+    {
+        chipId: 'B3',
+        chipName: '74LS157',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls157.pdf',
+        oscURLStem: 'osc/B3-*.png'
+    },
+    {
+        chipId: 'A3',
+        chipName: '74LS158',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls158.pdf',
+        oscURLStem: 'osc/A3-*.png'
+    },
+    {
+        chipId: 'R4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/R4-*.png'
+    },
+    {
+        chipId: 'P4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/P4-*.png'
+    },
+    {
+        chipId: 'N4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/N4-*.png'
+    },
+    {
+        chipId: 'M4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/M4-*.png'
+    },
+    {
+        chipId: 'L4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/L4-*.png'
+    },
+    {
+        chipId: 'K4',
+        chipName: '2114-2',
+        pinCount: 18,
+        datasheetURL: 'datasheets/2114-2.pdf',
+        oscURLStem: 'osc/K4-*.png'
+    },
+    {
+        chipId: 'H4',
+        chipName: '74LS245',
+        pinCount: 20,
+        datasheetURL: 'datasheets/74ls245.pdf',
+        oscURLStem: 'osc/H4-*.png'
+    },
+    {
+        chipId: 'F4',
+        chipName: '74LS86',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls86.pdf',
+        oscURLStem: 'osc/F4-*.png'
+    },
+    {
+        chipId: 'E4',
+        chipName: '74LS157',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls157.pdf',
+        oscURLStem: 'osc/E4-*.png'
+    },
+    {
+        chipId: 'D4',
+        chipName: '74LS273',
+        pinCount: 20,
+        datasheetURL: 'datasheets/74ls273.pdf',
+        oscURLStem: 'osc/D4-*.png'
+    },
+    {
+        chipId: 'C4',
+        chipName: '74LS00',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls00.pdf',
+        oscURLStem: 'osc/C4-*.png'
+    },
+    {
+        chipId: 'B4',
+        chipName: '74LS377',
+        pinCount: 20,
+        datasheetURL: 'datasheets/74ls377.pdf',
+        oscURLStem: 'osc/B4-*.png'
+    },
+    {
+        chipId: 'A4',
+        chipName: 'IM5623',
+        pinCount: 16,
+        datasheetURL: 'datasheets/IM5623.pdf',
+        oscURLStem: 'osc/A4-*.png'
+    },
+    {
+        chipId: 'S5',
+        chipName: 'NVC284',
+        pinCount: 28,
+        datasheetURL: 'datasheets/nvc284.pdf',
+        oscURLStem: 'osc/S5-*.png'
+    },
+    {
+        chipId: 'N5',
+        chipName: '74LS08',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls08.pdf',
+        oscURLStem: 'osc/N5-*.png'
+    },
+    {
+        chipId: 'M5',
+        chipName: '74LS74',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls74.pdf',
+        oscURLStem: 'osc/M5-*.png'
+    },
+    {
+        chipId: 'L5',
+        chipName: '74LS139',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls139.pdf',
+        oscURLStem: 'osc/L5-*.png'
+    },
+    {
+        chipId: 'F5',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/F5-*.png'
+    },
+    {
+        chipId: 'E5',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/E5-*.png'
+    },
+    {
+        chipId: 'C5',
+        chipName: '74LS194',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls194.pdf',
+        oscURLStem: 'osc/C5-*.png'
+    },
+    {
+        chipId: 'B5',
+        chipName: '74LS194',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls194.pdf',
+        oscURLStem: 'osc/B5-*.png'
+    },
+    {
+        chipId: 'A5',
+        chipName: '74LS157',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls157.pdf',
+        oscURLStem: 'osc/A5-*.png'
+    },
+    {
+        chipId: 'S6',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/S6-*.png'
+    },
+    {
+        chipId: 'R6',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/R6-*.png'
+    },
+    {
+        chipId: 'J6',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/J6-*.png'
+    },
+    {
+        chipId: 'H6',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/H6-*.png'
+    },
+    {
+        chipId: 'F6',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/F6-*.png'
+    },
+    {
+        chipId: 'E6',
+        chipName: '2532',
+        pinCount: 24,
+        datasheetURL: 'datasheets/2532.pdf',
+        oscURLStem: 'osc/E6-*.png'
+    },
+    {
+        chipId: 'D6',
+        chipName: 'NVC284',
+        pinCount: 28,
+        datasheetURL: 'datasheets/nvc285.pdf',
+        oscURLStem: 'osc/D6-*.png'
+    },
+    {
+        chipId: 'B6',
+        chipName: 'Z80',
+        pinCount: 40,
+        datasheetURL: 'datasheets/z80.pdf',
+        oscURLStem: 'osc/B6-*.png'
+    },
+    {
+        chipId: 'N7',
+        chipName: '74LS42',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls42.pdf',
+        oscURLStem: 'osc/N7-*.png'
+    },
+    {
+        chipId: 'M7',
+        chipName: '74LS139',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls139.pdf',
+        oscURLStem: 'osc/M7-*.png'
+    },
+    {
+        chipId: 'N7',
+        chipName: '74LS02',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls02.pdf',
+        oscURLStem: 'osc/N7-*.png'
+    },
+    {
+        chipId: 'J7',
+        chipName: '74LS138',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls138.pdf',
+        oscURLStem: 'osc/J7-*.png'
+    },
+    {
+        chipId: 'H7',
+        chipName: '74LS08',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls08.pdf',
+        oscURLStem: 'osc/H7-*.png'
+    },
+    {
+        chipId: 'F7',
+        chipName: '7603',
+        pinCount: 16,
+        datasheetURL: 'datasheets/7603.pdf',
+        oscURLStem: 'osc/F7-*.png'
+    },
+    {
+        chipId: 'H8',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/H8-*.png'
+    },
+    {
+        chipId: 'F8',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/F8-*.png'
+    },
+    {
+        chipId: 'E8',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/E8-*.png'
+    },
+    {
+        chipId: 'D8',
+        chipName: '74LS367',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls367.pdf',
+        oscURLStem: 'osc/D8-*.png'
+    },
+    {
+        chipId: 'C8',
+        chipName: '74LS74',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls74.pdf',
+        oscURLStem: 'osc/C8-*.png'
+    },
+    {
+        chipId: 'B8',
+        chipName: '74LS368',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls368.pdf',
+        oscURLStem: 'osc/B8-*.png'
+    },
+    {
+        chipId: 'A8',
+        chipName: '74LS107',
+        pinCount: 14,
+        datasheetURL: 'datasheets/74ls107.pdf',
+        oscURLStem: 'osc/A8-*.png'
+    },
+    {
+        chipId: 'C9',
+        chipName: '74LS161',
+        pinCount: 16,
+        datasheetURL: 'datasheets/74ls161.pdf',
+        oscURLStem: 'osc/C9-*.png'
+    }
+];
+
+
+var currentChipData = null;
+
+</script>
+
+
+<style>
+
+body {
+      font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.chipText {
+    font-size: 16px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; /* Add relative positioning to the board */
+  background-image: url(pacman-background.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2048px;
+  height: 1536px;
+}
+
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* Add chip dimensions and other styles as needed */
+  position: absolute; /* Add absolute positioning to the chips */
+}
+
+.chipname {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.arrow {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.textBlob {
+  width:40%;
+  text-align:right;
+}
+
+#N1 {
+  width: 100px;
+  height: 40px;
+  top: 415px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#M1 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L1 {
+  width: 100px;
+  height: 40px;
+  top: 545px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#K1 {
+  width: 100px;
+  height: 40px;
+  top: 600px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H1 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F1 {
+  width: 100px;
+  height: 40px;
+  top: 788px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E1 {
+  width: 100px;
+  height: 40px;
+  top: 848px;
+  left: 170px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#S2 {
+  width: 100px;
+  height: 40px;
+  top: 230px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#R2 {
+  width: 100px;
+  height: 40px;
+  top: 290px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+
+#P2 {
+  width: 100px;
+  height: 40px;
+  top: 355px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+
+#M2 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L2 {
+  width: 100px;
+  height: 40px;
+  top: 540px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#K2 {
+  width: 100px;
+  height: 40px;
+  top: 600px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H2 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F2 {
+  width: 100px;
+  height: 40px;
+  top: 788px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E2 {
+  width: 100px;
+  height: 40px;
+  top: 848px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#D2 {
+  width: 100px;
+  height: 40px;
+  top: 912px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#C2 {
+  width: 100px;
+  height: 40px;
+  top: 974px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B2 {
+  width: 100px;
+  height: 40px;
+  top: 1035px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#A2 {
+  width: 100px;
+  height: 40px;
+  top: 1095px;
+  left: 290px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#S3 {
+  width: 100px;
+  height: 40px;
+  top: 230px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#R3 {
+  width: 100px;
+  height: 40px;
+  top: 290px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#P3 {
+  width: 100px;
+  height: 40px;
+  top: 355px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#N3 {
+  width: 100px;
+  height: 40px;
+  top: 415px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#M3 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L3 {
+  width: 100px;
+  height: 40px;
+  top: 540px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#K3 {
+  width: 100px;
+  height: 40px;
+  top: 600px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H3 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F3 {
+  width: 100px;
+  height: 40px;
+  top: 788px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E3 {
+  width: 100px;
+  height: 40px;
+  top: 848px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#D3 {
+  width: 100px;
+  height: 40px;
+  top: 912px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B3 {
+  width: 100px;
+  height: 40px;
+  top: 1035px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#A3 {
+  width: 100px;
+  height: 40px;
+  top: 1095px;
+  left: 415px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#R4 {
+  width: 100px;
+  height: 40px;
+  top: 290px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#P4 {
+  width: 100px;
+  height: 40px;
+  top: 355px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#N4 {
+  width: 100px;
+  height: 40px;
+  top: 415px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#M4 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L4 {
+  width: 100px;
+  height: 40px;
+  top: 540px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#K4 {
+  width: 100px;
+  height: 40px;
+  top: 600px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H4 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F4 {
+  width: 100px;
+  height: 40px;
+  top: 788px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E4 {
+  width: 100px;
+  height: 40px;
+  top: 848px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#D4 {
+  width: 100px;
+  height: 40px;
+  top: 912px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#C4 {
+  width: 100px;
+  height: 40px;
+  top: 974px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B4 {
+  width: 100px;
+  height: 40px;
+  top: 1035px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#A4 {
+  width: 100px;
+  height: 40px;
+  top: 1095px;
+  left: 544px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#S5 {
+  width: 140px;
+  height: 70px;
+  top: 230px;
+  left: 685px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#N5 {
+  width: 100px;
+  height: 40px;
+  top: 415px;
+  left: 720px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#M5 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 720px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L5 {
+  width: 100px;
+  height: 40px;
+  top: 540px;
+  left: 720px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F5 {
+  width: 140px;
+  height: 70px;
+  top: 762px;
+  left: 685px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E5 {
+  width: 140px;
+  height: 70px;
+  top: 834px;
+  left: 685px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#C5 {
+  width: 100px;
+  height: 40px;
+  top: 974px;
+  left: 725px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B5 {
+  width: 100px;
+  height: 40px;
+  top: 1035px;
+  left: 725px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#A5 {
+  width: 100px;
+  height: 40px;
+  top: 1095px;
+  left: 725px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#S6 {
+  width: 100px;
+  height: 40px;
+  top: 230px;
+  left: 995px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#R6 {
+  width: 100px;
+  height: 40px;
+  top: 290px;
+  left: 995px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#J6 {
+  width: 140px;
+  height: 70px;
+  top: 630px;
+  left: 963px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H6 {
+  width: 140px;
+  height: 70px;
+  top: 702px;
+  left: 963px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F6 {
+  width: 140px;
+  height: 70px;
+  top: 774px;
+  left: 963px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E6 {
+  width: 140px;
+  height: 70px;
+  top: 846px;
+  left: 963px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#D6 {
+  width: 140px;
+  height: 70px;
+  top: 922px;
+  left: 1020px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B6 {
+  width: 190px;
+  height: 70px;
+  top: 1024px;
+  left: 1000px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#N7 {
+  width: 100px;
+  height: 40px;
+  top: 415px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#M7 {
+  width: 100px;
+  height: 40px;
+  top: 480px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#L7 {
+  width: 100px;
+  height: 40px;
+  top: 540px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#J7 {
+  width: 100px;
+  height: 40px;
+  top: 665px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H7 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F7 {
+  width: 100px;
+  height: 40px;
+  top: 788px;
+  left: 1150px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#H8 {
+  width: 100px;
+  height: 40px;
+  top: 725px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#F8 {
+  width: 100px;
+  height: 40px;
+  top: 785px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#E8 {
+  width: 100px;
+  height: 40px;
+  top: 848px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#D8 {
+  width: 100px;
+  height: 40px;
+  top: 912px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#C8 {
+  width: 100px;
+  height: 40px;
+  top: 974px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#B8 {
+  width: 100px;
+  height: 40px;
+  top: 1035px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#A8 {
+  width: 100px;
+  height: 40px;
+  top: 1095px;
+  left: 1270px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+#C9 {
+  width: 100px;
+  height: 40px;
+  top: 974px;
+  left: 1380px;
+  background-color: rgba(0,255,255,0.2);
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 1% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="board">
+  <div class="chip" id="A2"></div>
+  <div class="chip" id="A3"></div>
+  <div class="chip" id="A4"></div>
+  <div class="chip" id="A5"></div>
+  <div class="chip" id="A8"></div>
+  <div class="chip" id="B2"></div>
+  <div class="chip" id="B3"></div>
+  <div class="chip" id="B4"></div>
+  <div class="chip" id="B5"></div>
+  <div class="chip" id="B6"></div>
+  <div class="chip" id="B8"></div>
+  <div class="chip" id="C2"></div>
+  <div class="chip" id="C4"></div>
+  <div class="chip" id="C8"></div>
+  <div class="chip" id="C5"></div>
+  <div class="chip" id="C9"></div>
+  <div class="chip" id="D2"></div>
+  <div class="chip" id="D3"></div>
+  <div class="chip" id="D4"></div>
+  <div class="chip" id="D6"></div>
+  <div class="chip" id="D8"></div>
+  <div class="chip" id="E1"></div>
+  <div class="chip" id="E2"></div>
+  <div class="chip" id="E3"></div>
+  <div class="chip" id="E4"></div>
+  <div class="chip" id="E5"></div>
+  <div class="chip" id="E6"></div>
+  <div class="chip" id="E8"></div>
+  <div class="chip" id="F1"></div>
+  <div class="chip" id="F2"></div>
+  <div class="chip" id="F3"></div>
+  <div class="chip" id="F4"></div>
+  <div class="chip" id="F5"></div>
+  <div class="chip" id="F6"></div>
+  <div class="chip" id="F7"></div>
+  <div class="chip" id="F8"></div>
+  <div class="chip" id="H1"></div>
+  <div class="chip" id="H2"></div>
+  <div class="chip" id="H3"></div>
+  <div class="chip" id="H4"></div>
+  <div class="chip" id="H6"></div>
+  <div class="chip" id="H7"></div>
+  <div class="chip" id="H8"></div>
+  <div class="chip" id="J6"></div>
+  <div class="chip" id="J7"></div>
+  <div class="chip" id="K1"></div>
+  <div class="chip" id="K2"></div>
+  <div class="chip" id="K3"></div>
+  <div class="chip" id="K4"></div>
+  <div class="chip" id="L1"></div>
+  <div class="chip" id="L2"></div>
+  <div class="chip" id="L3"></div>
+  <div class="chip" id="L4"></div>
+  <div class="chip" id="L5"></div>
+  <div class="chip" id="L7"></div>
+  <div class="chip" id="M1"></div>
+  <div class="chip" id="M2"></div>
+  <div class="chip" id="M3"></div>
+  <div class="chip" id="M4"></div>
+  <div class="chip" id="M5"></div>
+  <div class="chip" id="M7"></div>
+  <div class="chip" id="N1"></div>
+  <div class="chip" id="N3"></div>
+  <div class="chip" id="N4"></div>
+  <div class="chip" id="N5"></div>
+  <div class="chip" id="N7"></div>
+  <div class="chip" id="P2"></div>
+  <div class="chip" id="P3"></div>
+  <div class="chip" id="P4"></div>
+  <div class="chip" id="R2"></div>
+  <div class="chip" id="R3"></div>
+  <div class="chip" id="R4"></div>
+  <div class="chip" id="R6"></div>
+  <div class="chip" id="S2"></div>
+  <div class="chip" id="S3"></div>
+  <div class="chip" id="S5"></div>
+  <div class="chip" id="S6"></div>
+  <div class="chipName" id="textBlob1">Pac-man Diagnostic Utility - &copy; 2023 - Joe Rounceville</div>
+  <div class="textBlob" id="textBlob2"><a href="datasheets/pacman_operating_manual.pdf" target="_blank">Operating Manual</a></div>
+</div>
+
+<div id="chipModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="chipModelContent">modal content here</div>
+  </div>
+</div>
+
+
+<script language="javascript">
+
+var currentPinNumber = 1;
+
+function left(pinCount) {
+  currentPinNumber--;
+  if(currentPinNumber == 0)
+    currentPinNumber = pinCount;
+
+  document.getElementById("chipModelContent").innerHTML = getText(currentPinNumber);
+}
+
+function right(pinCount) {
+  currentPinNumber++;
+  if(currentPinNumber > pinCount)
+    currentPinNumber = 1;
+
+  document.getElementById("chipModelContent").innerHTML = getText(currentPinNumber);
+}
+
+function redrawContent(forcePin) {
+  currentPinNumber = forcePin;
+  document.getElementById("chipModelContent").innerHTML = getText(currentPinNumber);  
+}
+
+function getText(pinNum) {
+  var txt = "";  
+
+  txt += "<div class='chipname'>Chip: " + currentChipData.chipId.split('').reverse().join('') + ", Type: " + currentChipData.chipName
+  txt += ", Pin " + currentPinNumber;
+  txt += "<table border=0 class='chipText'>";
+  txt += "<tr>";
+  txt += "  <td>";
+  txt += "    <img src='osc/" + currentChipData.chipId + "-"+currentPinNumber+".png'></img>"
+  txt += "  </td>";
+  txt += "  <td align=center style='vertical-align:top'>";
+  txt += "    <table border=0 style='display:inline-block'>"
+  txt += "    <tr><td align=left><a href='#' class='arrow' onclick='left("+currentChipData.pinCount+");'>&#8592;</td><td></td><td></td><td align=right><a href='#' class='arrow' onclick='right("+currentChipData.pinCount+");'>&#8594;</td>"
+  for(var j = 0; j < currentChipData.pinCount; j++) {
+    if(j % 4 == 0)
+      txt += "</tr><tr>"
+    if(currentPinNumber == (j+1) ) {
+        txt += "<td align=center width=25%><a href='#' onclick='redrawContent("+ (j+1) +");'><b>" + (j+1) + "</b></a></td>"
+    }
+    else {
+        txt += "<td align=center width=25%><a href='#' onclick='redrawContent("+ (j+1) +");'>" + (j+1) + "&nbsp;</a></td>"      
+    }
+  }
+  txt += "    </tr></table>"
+  txt += "Datasheet:&nbsp;<a href='" + currentChipData.datasheetURL + "' target='_blank'>" + currentChipData.chipName + "</a>"
+  txt += "  </td>";
+  txt += "</tr>";
+  txt += "</table>";
+  txt += "</div>";
+  return txt;
+}
+
+// Function to show the chip modal with pin links
+function showChipModal(chipId, aDiv) {
+  for(var i = 0; i<chipData.length; i++) {
+     if(chipData[i].chipId == chipId)
+          currentChipData = chipData[i];
+  }
+  currentPinNumber = 1;
+
+  document.getElementById("chipModelContent").innerHTML = getText();
+}
+
+var chips = document.getElementsByClassName("chip");
+for (var i = 0; i < chips.length; i++) {
+  chips[i].addEventListener("click", 
+    function(event) {
+      var chipId = event.target.id;
+      document.getElementById("chipModal").style.display = 'block';
+      showChipModal(chipId, chips[i]);
+    }
+  );
+}
+
+
+
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById("chipModal").style.display = "none";
+}
+
+// Event listener for click event on the close button
+closeBtn.addEventListener("click", closeModal);
+
+</script>
+
+</body>
+</html>
